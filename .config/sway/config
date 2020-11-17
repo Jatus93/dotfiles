@@ -316,6 +316,6 @@ exec /home/gianm/.config/waybar/launch.sh
 
 ### Startup application
 # exec nextcloud --background
-exec ~/.config/scripts/wallpaper ~/Immagini/wallpaper 600
+exec ~/.config/sway/scripts/wallpaper.sh ~/Immagini/wallpaper 600
 exec telegram-desktop -startintray
-exec discord --start-minimized
+# exec discord --start-minimized
