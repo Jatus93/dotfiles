@@ -315,6 +315,7 @@ exec mako -c /home/gianm/.config/mako/config
 exec /home/gianm/.config/waybar/launch.sh
 
 ### Startup application
-exec nextcloud --background
+# exec nextcloud --background
+exec ~/.config/scripts/wallpaper ~/Immagini/wallpaper 600
 exec telegram-desktop -startintray
 exec discord --start-minimized
