@@ -93,20 +93,7 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 noremap <C-Tab> :<C-U>tabnext<CR>
 inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
 cnoremap <C-Tab> <C-C>:tabnext<CR>
-" CTRL-SHIFT-Tab is previous tab
- noremap <C-S-Tab> :<C-U>tabprevious<CR>
- inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
- cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
-" Color scheme (terminal)
-set t_Co=256
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-" put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-" in ~/.vim/colors/ and uncomment:
-colorscheme solarized
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
+
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
