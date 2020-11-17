@@ -12,11 +12,10 @@
 
 MENU_STRING='Lock\nLogout\nReboot\nSuspend\nShutdown'
 COMMAND=$(echo -e $MENU_STRING | wofi -i -d -p"Powermenu")
-echo $COMMAND
 case "$COMMAND" in
   *Lock) echo "locking";;
-  *Logout) echo "loggingout";;
-  *Reboot) echo "Rebooting";;
-  *Suspend) echo "Suspending";;
-  *Shutdown) echo "Shutdowning"
+  *Logout) swaymsg exit;;
+  *Reboot) systemctl reboot ;;
+  *Suspend) systemctl suspend;;
+  *Shutdown) systemctl -i poweroff
 esac

@@ -292,8 +292,19 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
+# screenshot
+
+bindsym --release {
+    Shift+Print exec grimshot save area
+    Control+Shift+Print exec grimshot copy area
+    $mod+Print exec grimshot save win
+    $mod+Control+Print exec grimshot copy win
+    Print exec grimshot save screen
+    Control+Print exec grimshot copy screen
+}
+
 # Powermenu
-bindsym $mod+Shift+p exec .config/rofi/powermenu-alt
+bindsym $mod+Shift+p exec .config/wofi/powermenu-alt
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
 
