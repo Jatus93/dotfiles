@@ -1,9 +1,12 @@
 #!/bin/bash
-wallpapers=($1/*)
-size=${#wallpapers[@]}
+pkill swaybg
+killall -q oguri
+oguri&
 while [ true ]
 do
+  wallpapers=($1/*)
+  size=${#wallpapers[@]}
   selected=$((0 + $RANDOM % $size))
-  sway output "*" bg "${wallpapers[$selected]}" fill > /dev/null
+  ogurictl output --image "${wallpapers[$selected]}" "*" > /dev/null
   sleep $2s
 done

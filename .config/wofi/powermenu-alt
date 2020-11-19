@@ -1,21 +1,24 @@
 #!/bin/bash
 
-# ## Created By Aditya Shakya
-# MENU="$(rofi -sep "|" -dmenu -i -p 'System' -width 12 -hide-scrollbar -line-padding 4 -padding 20 -lines 5 <<< "> Lock|> Logout|> Reboot|> Suspend|> Shutdown")"
-#             case "$MENU" in
-#                 *Lock) dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock ;;
-#                 *Logout) swaymsg exit;;
-#                 *Reboot) systemctl reboot ;;
-#                 *Suspend) systemctl suspend;;
-#                 *Shutdown) systemctl -i poweroff
-#             esac
+lock_sleep(){
+  swaylock \
+  --screenshots \
+	--clock \
+	--indicator \
+	--indicator-radius 120 \
+	--indicator-thickness 10 \
+  --effect-blur 7x5 \
+  timeout 300 'swaymsg "output * dpms off"' \
+  resume 'swaymsg "output * dpms on"' \
+  before-sleep 'swaylock -f -c 000000'
+}
 
 MENU_STRING='Lock\nLogout\nReboot\nSuspend\nShutdown'
 COMMAND=$(echo -e $MENU_STRING | wofi -i -d -p"Powermenu")
 case "$COMMAND" in
-  *Lock) echo "locking";;
+  *Lock) lock_sleep;;
   *Logout) swaymsg exit;;
   *Reboot) systemctl reboot ;;
-  *Suspend) systemctl suspend;;
+  *Suspend) swaylock -f -c 000000 & systemctl suspend;;
   *Shutdown) systemctl -i poweroff
 esac

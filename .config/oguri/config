@@ -1,0 +1,5 @@
+[output *]
+image=$HOME/Immagini/wallpaper/wallhaven-j8jllq.jpg
+scaling-mode=fill
+filter=best
+anchor=center
