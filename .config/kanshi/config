@@ -1,0 +1,11 @@
+profile {
+     output eDP-1 disable
+     output "Unknown U34G2G4R3 0x000006AE" mode 3440x1440@60Hz position 0,361
+     output "Acer Technologies VG270U TEHEE004852A" mode 2560x1440@60Hz position 3440,0 transform 270
+     exec swaymsg workspace 1, move workspace to '"Unknown U34G2G4R3 0x000006AE"'
+     exec swaymsg workspace 2, move workspace to '"Acer Technologies VG270U TEHEE004852A"'
+}
+
+profile laptop {
+     output eDP-1 enable mode 1920x1080 position 0,0
+}
