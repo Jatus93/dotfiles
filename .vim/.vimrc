@@ -134,4 +134,5 @@ Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 " Initialize plugin system
 call plug#end()
-autocmd vimenter * NERDTree
+let g:livepreview_previewer = 'zathura'
+let g:livepreview_use_biber = 1
