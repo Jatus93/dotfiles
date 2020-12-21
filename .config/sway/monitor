@@ -1,5 +1,0 @@
-set $laptop eDP-1
-bindswitch --reload --locked lid:on output $laptop disable
-bindswitch --reload --locked lid:off output $laptop enable
-output DP-3 pos 0 361 res 3440x1440 adaptive_sync on
-output DP-4 pos 3440 0 res 2560x1440 adaptive_sync on transform 90

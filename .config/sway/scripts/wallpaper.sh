@@ -1,7 +1,4 @@
 #!/bin/bash
-pkill swaybg
-killall -q oguri
-oguri&
 while [ true ]
 do
   wallpapers=($1/*)
