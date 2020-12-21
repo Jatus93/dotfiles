@@ -7,7 +7,11 @@ filetype off
 " TODO: Load plugins here (pathogen or vundle)
 
 " Turn on syntax highlighting
+
+packadd! dracula
 syntax on
+set background=dark
+colorscheme dracula
 
 " For plugins to load correctly
 filetype plugin indent on
@@ -83,16 +87,9 @@ vnoremap <F1> :set invfullscreen<CR>
 " Formatting
 map <leader>q gqip
 
-" Visualize tabs and newlines
-set listchars=tab:▸\ ,eol:¬
 " Uncomment this to enable by default:
 " set list " To enable by default
 " Or use your leader key + l to toggle on/off
-map <leader>l :set list!<CR> " Toggle tabs and EOL
-" CTRL-Tab is next tab
-noremap <C-Tab> :<C-U>tabnext<CR>
-inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
-cnoremap <C-Tab> <C-C>:tabnext<CR>
 
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
@@ -124,15 +121,11 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-" Unmanaged plugin (manually installed and updated)
-Plug '~/my-prototype-plugin'
-
 Plug 'preservim/nerdtree'
 
-" A Vim Plugin for Lively Previewing LaTeX PDF Output
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-
+Plug 'lervag/vimtex'
 " Initialize plugin system
 call plug#end()
-let g:livepreview_previewer = 'zathura'
-let g:livepreview_use_biber = 1
+let g:tex_flavor = 'latex'
+let g:vimtex_view_enabled = 1
+let g:vimtex_view_automatic = 1
