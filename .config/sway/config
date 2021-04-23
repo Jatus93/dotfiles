@@ -234,7 +234,7 @@ gaps outer -2
 default_border pixel 0
 
 # Smart gaps (gaps used if only more than one container on the workspace)
-smart_gaps on
+smart_gaps off
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
@@ -288,29 +288,20 @@ bindsym --release {
     Control+Print exec grimshot copy screen
 }
 
-output HEADLESS-1 {
-  pos 1200,0
-  mode 2048x1536
-  position 1920,0
-  scale 1.8
-}
-
 # Powermenu
 bindsym $mod+Shift+p exec ~/.config/wofi/powermenu-alt
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
 
 ## utility
-exec lxqt-policykit-agent
-exec nm-applet --indicator
-exec mako -c /home/gianm/.config/mako/config
 exec /home/gianm/.config/waybar/launch.sh
 bindsym $mod+Shift+r exec ~/.config/sway/scripts/startup.sh
 exec ~/.config/sway/scripts/startup.sh
 
-### virtual monitor for ipad
-bindsym $mod+Shift+m exec ~/.config/sway/scripts/ipad.sh
 
 ### Startup application
 exec nextcloud --background
 exec telegram-desktop -startintray
+exec lxqt-policykit-agent
+exec nm-applet --indicator
+exec mako -c /home/gianm/.config/mako/config

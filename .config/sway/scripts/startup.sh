@@ -1,4 +1,5 @@
 #!/bin/bash
+pkill oguri
 pkill kanshi
 pkill wallpaper.sh
 pkill swaybg &
@@ -7,5 +8,5 @@ kanshi &
 export XDG_CURRENT_DESKTOP=Unity
 /home/gianm/.config/waybar/launch.sh &
 oguri-swaybg &
-sleep 2s
-~/.config/sway/scripts/wallpaper.sh ~/Immagini/wallpaper 600 &
+sleep 1s
+~/.config/sway/scripts/wallpaper.sh ~/Immagini/wallpaper/NordWallpaper 600 &

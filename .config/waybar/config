@@ -4,7 +4,7 @@
     "height": 15, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "network"],
+    "modules-left": ["sway/workspaces", "custom/media", "network"],
     "modules-center": [
       "custom/left-arrow-dark-1",
       "clock#1",
@@ -33,9 +33,7 @@
 //             "default": ""
 //         }
 //     },
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
+
   "clock#1": {
     "format": "{:%a}"
   },

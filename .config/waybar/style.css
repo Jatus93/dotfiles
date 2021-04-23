@@ -8,30 +8,32 @@ window#waybar {
     color: #fdf6e3;
 }
 #clock.1 {
-    background: #2D888D;
+    background: #4c566a;
+    color: #e5e9f0;
     /* border-radius: 15px; */
 }
 #clock.2 {
-    color: #1E1F23;
-    background: #DCDCCC;
+    color: #e5e9f0;
+    background: #4c566a;
     /* border-radius: 15px; */
 }
 #clock.3 {
-    background: #E00415;
+    color: #e5e9f0;
+    background: #4c566a;
     /* border-radius: 15px; */
 }
 #workspaces {
     margin-left: 12px;
     /* border-radius: 15px; */
-    background: #000000;
+    background: #2e3440;
 }
 #workspaces button {
     padding: 0 2px;
     /* border-radius: 15px; */
-    color: #fdf6e3;
+    color: #eceff4;
 }
 #workspaces button.focused {
-    color:  #81D425;
+    color:  #d8dee9;
 }
 #workspaces button:hover {
     box-shadow: inherit;
@@ -42,35 +44,35 @@ window#waybar {
     background: #0C3D27;
 }
 #pulseaudio {
-    background: #9aedfe;
+    background: #434c5e;
 }
 #backlight {
-    background: #b58900
+    background: #434c5e;
 }
 #memory {
-    background: #ff6e67;
+    background: #434c5e;
 }
 #temperature {
-    background: #5af78e;
+    background: #4c566a;
 }
 #cpu {
-    background: #f1fa8c;
+    background: #4c566a;
 }
 #battery {
-    background: white;
+    background: #3b4252;
 }
 #battery.charging {
     background: green;
 }
 #network {
-    background: #bd93f9;
+    background: #3b4252;
 }
 #tray{
-  background: #557AF5;
+  background: #2e3440;
 }
 
 #pulseaudio, #backlight, #memory, #cpu, #temperature, #battery, #network, #tray {
-    color: #1E1F23;
+    color: #d8dee9;
     border-radius: 5px;
     margin: 4px 4px;
     padding: 5px 10px;

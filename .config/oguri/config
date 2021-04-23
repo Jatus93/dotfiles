@@ -1,5 +1,4 @@
 [output *]
-image=$HOME/Immagini/wallpaper/wallhaven-j8jllq.jpg
-scaling-mode=fill
-filter=best
+image=~/Immagini/nord.jpg
+filter=nearest
 anchor=center
